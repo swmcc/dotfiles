@@ -1,0 +1,15 @@
+!/bin/sh -f
+
+rsync -a --exclude '.svn' /www/ /home/swm/Dropbox/backups/www
+rsync -a --exclude '.svn' /usr/local/bin/ /home/swm/Dropbox/backups/usr/local/bin
+rsync -a --exclude '5.8.8' /usr/lib/perl5/site_perl/ /home/swm/Dropbox/backups/usr/lib/perl5/site_perl
+rsync -a --exclude 'Dropbox' /home/swm/ /home/swm/Dropbox/backups/home/swm/
+
+cp /etc/httpd/conf/httpd.conf /home/swm/Dropbox/backups/
+
+mysqlhotcopy wiki /home/swm/Dropbox/backups/db/wiki -u root --keepold
+mysqldump -uroot swmcc_blog > /home/swm/Dropbox/backups/db/swmcc_log.sql
+mysqlhotcopy swmcc_blog /home/swm/Dropbox/backups/db/swmcc_blog -u root -allowold
+
+mysqldump -uroot tv > /home/swm/Dropbox/backups/db/tv_log.sql
+mysqlhotcopy tv /home/swm/Dropbox/backups/db/tv -u root -allowold

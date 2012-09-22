@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# View the diffs in a nice fashion 
+
+git-diff -w $@ | mate

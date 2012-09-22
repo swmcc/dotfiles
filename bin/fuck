@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Whatever the current project is - tail the error log
+# There is a smarter way to do this - but this has worked for me for 13 years
+
+sudo tail -f /wherever 
+

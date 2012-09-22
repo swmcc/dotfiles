@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Quick search in a directory for a string ($1).
+# I tend to type in gfrep more often than not. So stole this from @holman
+# https://github.com/holman/dotfiles/blob/master/bin/search
+
+set -e
+
+# use -iru to search directories ack usually ignores (like .git)
+ack -i $1
