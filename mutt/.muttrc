@@ -1,10 +1,14 @@
 # @swmcc .muttrc file.
 
 # Change the following lines to match your account details
-account-hook	imaps://user@domain@imap.gmail.com 'set imap_user=user@domain@gmail.com imap_pass=""'
+account-hook	imaps://user@domain@imap.gmail.com 'set imap_user=user@domain@gmail.com imap_pass="PASSWORD"'
 folder-hook     'imaps://user@domain@imap.gmail.com' 'set folder=imaps://user@domain@imap.gmail.com/'
 set folder="imaps://user@domain@imap.gmail.com"
 mailboxes "=INBOX"
+
+# Copy and paste the above lines for every account you have. You can set up the folder display in GMAIL
+# under the 'Label' section. There is probably a way to do this in mutt - however I can't remember it
+# if there is. 
 
 unset folder
 unset imap_passive
