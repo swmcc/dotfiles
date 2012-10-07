@@ -1,0 +1,4 @@
+#!/bin/sh -f
+
+perltidy $1;
+mv $1.tdy $1
