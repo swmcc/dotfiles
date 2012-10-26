@@ -1,0 +1,25 @@
+# Generic ignore file. I might split this out into paticular applications if it continues to grow 
+# but it suits my needs for now
+
+# Mac - *nix systems
+*.DS_Store
+*.swp
+*.out
+
+# Jekyll
+_site/
+
+# Node
+node_modules/
+
+# Capistrano
+config/
+Capfile
+
+# Generic log file
+*.log
+log/
+tmp/
+
+# Rails - you'd be suprised at how many times i have commited this
+database.yml 
