@@ -2,8 +2,12 @@
 alias vpn='boom secret repknightvpn'
 
 function parse_git_branch () {
-       git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+        EMAIL=`git config --global user.email`
+
+        if [ "$EMAIL" = "me@swm.cc" ]; then EMAIL='G'; else EMAIL='W'; fi
+        git branch 2> /dev/null | sed -e '/^[^*]/d ' -e 's/* \(.*\)/ (\1) ['$EMAIL']/'
 }
+
 
 export JAVA_HOME=`/usr/libexec/java_home  -v 1.7`
 
