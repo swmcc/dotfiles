@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+import re
+import urllib
+import socket
+import sys
+ 
+#Test that ipchicken.com is up#
+var = socket.socket()
+try:
+        var.connect(('www.ipchicken.com', 80))
+        var.close()
+except socket.error:
+        var.close()
+        print "www.iphicken.com seems to be down.."
+        sys.exit(1)
+ 
+var = urllib.urlopen('http://www.ipchicken.com')
+var = str(var.readlines())
+ 
+reg = "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
+ 
+for ip in re.findall(reg, var):
+        print """Your WAN IP address is: %s \nBrought to you by www.ipchicken.com""" % ip
+sys.exit(0)
