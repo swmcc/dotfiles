@@ -4,7 +4,7 @@ alias vpn='boom secret repknightvpn'
 function parse_git_branch () {
         EMAIL=`git config --global user.email`
 
-        if [ "$EMAIL" = "me@swm.cc" ]; then EMAIL='G'; else EMAIL='W'; fi
+        if [ "$EMAIL" = "me@swm.cc" ]; then EMAIL='G'; else EMAIL='R'; fi
         git branch 2> /dev/null | sed -e '/^[^*]/d ' -e 's/* \(.*\)/ (\1) ['$EMAIL']/'
 }
 
