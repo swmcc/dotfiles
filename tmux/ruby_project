@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# I loaded this in my accident (damn you git add .). 
+# This wont work at the minute. There is a version on my 
+# laptop that works, kinda.. I didn't want to add it until
+# it was working so please don't use this. 22-May-13 
+
 $BASE = `pwd`
  
 tmux start-server
