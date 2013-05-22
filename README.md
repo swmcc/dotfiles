@@ -1,6 +1,6 @@
-# swmcc dotfiles
+# dotfiles
 
-My kitchen sink of handy utility scripts that I have.
+My kitchen sink of handy utility scripts & configurations that I have that aid my workflow.
 
 ![dotifles](http://f.cl.ly/items/1P0H2l0o393Y34280D0M/terminal-ls-show-hidden-files-example.png "dotfiles")
 
