@@ -17,5 +17,5 @@ GREEN="\[\033[0;32m\]"
 NO_COLOUR="\[\033[0m\]"
 
 PS1="\[${RED}\]\t \[${GREEN}\]pippin:\[ ${GREEN}\]\w\[${NC}\]\[${YELLOW}\]\$(parse_git_branch) $NO_COLOUR\$ "
-alias ta='tmux attach'
-alias todo='ghi list'
+alias annoyances='tmux attach'
+alias add_annoyances='ghi list'
