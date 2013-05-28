@@ -1,0 +1,9 @@
+#!/bin/sh -f
+
+BASEDIR="/tmp/$$"
+
+git clone https://gist.github.com/5657497.git $BASEDIR 
+mv $BASEDIR/start_development .
+git add start_development
+git commit -m "Added start_development"
+rm -fr $BASEDIR 
