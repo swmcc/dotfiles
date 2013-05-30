@@ -7,3 +7,4 @@ GISTDIR="/tmp/$$"
 git clone https://gist.github.com/5678748.git $GISTDIR 
 mv $GISTDIR/blog_skeleton.html $file 
 rm -fr $GISTDIR
+vim $file
