@@ -21,5 +21,6 @@ alias annoyances='tmux attach'
 alias add_annoyances='ghi list'
 alias ts='tmux list-session'
 alias ta='tmux attach -t'
+alias tm='tmux switch -t'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
