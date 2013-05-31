@@ -19,7 +19,7 @@ NO_COLOUR="\[\033[0m\]"
 PS1="\[${RED}\]\t \[${GREEN}\]pippin:\[ ${GREEN}\]\w\[${NC}\]\[${YELLOW}\]\$(parse_git_branch) $NO_COLOUR\$ "
 alias annoyances='tmux attach'
 alias add_annoyances='ghi list'
-alias ts='tmux list-session'
+alias ts='tmux_sessions'
 alias ta='tmux attach -t'
 alias tm='tmux switch -t'
 
