@@ -22,5 +22,8 @@ alias add_annoyances='ghi list'
 alias ts='tmux_sessions'
 alias ta='tmux attach -t'
 alias tm='tmux switch -t'
+alias dev='cd ~/Development/'
+alias rdev='cd ~/Development/repknight/'
+alias gdev='cd ~/Development/github/'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
