@@ -1,0 +1,23 @@
+#!/usr/bin/perl
+
+#------------------------------------------------------------------------------
+# This was a hacky script written in literally five minutes one Friday.
+# I don't like the default tmux session screen so I wrote this, it sucks
+# but it works.
+#------------------------------------------------------------------------------
+use strict;
+use warnings;
+use Term::ANSIColor;
+
+system('clear');
+my @sessions = split(/\n/, `tmux list-session`);
+
+print color 'bold yellow'; print "\t\t[SESSIONS]\n";
+foreach my $session ( @sessions ) {
+  my ($session_name, $attached);
+  if ( $session =~ /^(.*?):/ ) {
+    $session_name = $1;
+    print color 'cyan'; printf "\t%s\n", $session_name;
+  }
+}
+
