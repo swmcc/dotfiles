@@ -133,3 +133,6 @@ color markers brightcyan black
 mono bold bold
 mono underline underline
 mono indicator reverse
+
+# Shout out to @szlwzl 
+set status_format="/Users/whoever/.muttrc/notify.sh '%?n?%n new?'|"
