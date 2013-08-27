@@ -1,10 +1,9 @@
 # whack out my password to the VPN and copy it to the clipboard
-alias vpn='boom secret repknightvpn'
 
 function parse_git_branch () {
         EMAIL=`git config --global user.email`
 
-        if [ "$EMAIL" = "me@swm.cc" ]; then EMAIL='G'; else EMAIL='R'; fi
+        if [ "$EMAIL" = "me@swm.cc" ]; then EMAIL='G'; else EMAIL='W'; fi
         git branch 2> /dev/null | sed -e '/^[^*]/d ' -e 's/* \(.*\)/ (\1) ['$EMAIL']/'
 }
 
@@ -23,7 +22,6 @@ alias ta='tmux attach -t'
 alias tm='tmux switch -t'
 alias tk='tmux kill-session -t'
 alias dev='cd ~/Development/'
-alias rdev='cd ~/Development/repknight/'
 alias gdev='cd ~/Development/github/'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
