@@ -1,0 +1,12 @@
+#!/bin/sh -f
+
+# Get my skeleton start_development from github 
+
+GISTDIR="/tmp/$$"
+git clone https://gist.github.com/5657497.git $GISTDIR
+mv $GISTDIR/start_development . 
+
+rm -fr /tmp/$$
+
+vim start_development
+
