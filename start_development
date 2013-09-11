@@ -1,0 +1,49 @@
+#!/bin/sh
+
+BASE=`pwd`
+PROJECT='dotfiles'
+
+tmux start-server
+ 
+# new-session creates first window named 'console'
+tmux new-session -d -s $PROJECT -n console 
+ 
+# split window 'h'orizontally (into two vertical panes)
+tmux split-window -t $PROJECT:console -h
+ 
+# select the left-most pane
+tmux last-pane
+ 
+# split this pane 'v'ertically (into two horizontal panes)
+tmux split-window -t $PROJECT:console -v
+ 
+# create a second window for 'shell'
+tmux new-window -t $PROJECT:2 -n shell
+ 
+# start a vim editor in the left-most vertical pane
+tmux send-keys -t $PROJECT:console.2 "cd $BASE;" C-m
+ 
+# widen the vim editor pane by 20 cells
+tmux resize-pane -L -t $PROJECT:console.2 20
+ 
+# run guard -c clears shell after each change
+tmux send-keys -t $PROJECT:console.0 "cd $BASE;" C-m
+ 
+# start rails server
+tmux send-keys -t $PROJECT:console.1 "cd $BASE;" C-m
+ 
+# start logging
+tmux send-keys -t $PROJECT:shell "cd $BASE;" C-m
+ 
+# select the vim pane in the rails window
+tmux select-window -t $PROJECT:console
+tmux select-pane -t $PROJECT:console.2
+
+# new-session creates a third window named 'dev'
+tmux new-window -t $PROJECT:3 -n dev 
+tmux split-window -t $PROJECT:dev -h
+tmux send-keys -t $PROJECT:dev.0 "cd $BASE; vim" C-m
+tmux send-keys -t $PROJECT:dev.1 "cd $BASE; vim" C-m
+ 
+# make the tmux session active
+tmux attach-session -d -t $PROJECT
