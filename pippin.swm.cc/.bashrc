@@ -23,5 +23,8 @@ alias tm='tmux switch -t'
 alias tk='tmux kill-session -t'
 alias dev='cd ~/Development/'
 alias gdev='cd ~/Development/github/'
+alias bi='bundle install'
+alias rdm='rake db:migrate'
+alias rdt='rake test'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
