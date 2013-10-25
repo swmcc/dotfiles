@@ -17,12 +17,19 @@ NO_COLOUR="\[\033[0m\]"
 
 PS1="\[${RED}\]\t \[${GREEN}\]pippin:\[ ${GREEN}\]\W\[${NC}\]\[${YELLOW}\]\$(parse_git_branch) $NO_COLOUR\$ "
 alias annoyances='ghi list'
+alias phs="python -m SimpleHTTPServer"
+alias nhs="http-server"
+alias dev='cd ~/Development/'
+alias gdev='cd ~/Development/github/'
+
+# tmux 
 alias ts='tmux_sessions'
 alias ta='tmux attach -t'
 alias tm='tmux switch -t'
 alias tk='tmux kill-session -t'
-alias dev='cd ~/Development/'
-alias gdev='cd ~/Development/github/'
+
+
+# ruby
 alias bi='bundle install'
 alias rdm='rake db:migrate'
 alias rdt='rake test'
