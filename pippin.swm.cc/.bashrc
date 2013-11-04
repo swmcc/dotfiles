@@ -21,6 +21,7 @@ alias phs="python -m SimpleHTTPServer"
 alias nhs="http-server"
 alias dev='cd ~/Development/'
 alias gdev='cd ~/Development/github/'
+alias copy_ssh_key="cat ~/.ssh/id_rsa.pub | pbcopy | echo 'It be in your clipboard sonny!!'"
 
 # tmux 
 alias ts='tmux_sessions'
