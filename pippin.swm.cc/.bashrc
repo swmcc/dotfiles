@@ -23,6 +23,9 @@ alias dev='cd ~/Development/'
 alias gdev='cd ~/Development/github/'
 alias copy_ssh_key="cat ~/.ssh/id_rsa.pub | pbcopy | echo 'It be in your clipboard sonny!!'"
 
+# If you aren't on a mac then use netstat -p or something
+alias op="lsof -i -P | grep -i "listen" | grep 'swm'"
+
 # tmux 
 alias ts='tmux_sessions'
 alias ta='tmux attach -t'
