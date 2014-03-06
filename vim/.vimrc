@@ -131,7 +131,9 @@ set pastetoggle=<F11>
 
 " Indentation settings for using 2 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
-set shiftwidth=2
+set smartindent
+set tabstop=4
+set shiftwidth=4
 set softtabstop=2
 set expandtab
 
@@ -156,7 +158,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 
 function! Tab_Or_Complete()
-  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+  if col('.')>1 && strpart( getline('.'), col('.')-2, 4 ) =~ '^\w'
     return "\<C-N>"
   else
     return "\<Tab>"
