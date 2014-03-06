@@ -116,8 +116,6 @@ set mouse=a
 " "press <Enter> to continue"
 set cmdheight=2
 
-" Display line numbers on the left
-set number
 
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
@@ -156,3 +154,26 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+
+function! Tab_Or_Complete()
+  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+    return "\<C-N>"
+  else
+    return "\<Tab>"
+  endif
+endfunction
+
+:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+:set dictionary="/usr/local/bin/dict"
+
+execute pathogen#infect()
+
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set number
+    else
+        set relativenumber
+    endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
