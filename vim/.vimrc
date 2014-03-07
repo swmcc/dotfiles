@@ -182,3 +182,5 @@ nnoremap <C-n> :call NumberToggle()<cr>
 
 highlight ColourColumn ctermbg=red
 call matchadd('ColourColumn', '\%81v', 100)
+
+nnoremap ; :
