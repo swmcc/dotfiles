@@ -179,3 +179,6 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
+
+highlight ColourColumn ctermbg=red
+set colorcolumn=81
