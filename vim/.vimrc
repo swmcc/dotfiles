@@ -184,3 +184,11 @@ highlight ColourColumn ctermbg=red
 call matchadd('ColourColumn', '\%81v', 100)
 
 nnoremap ; :
+
+# Getting used to tabs in vim
+map <C-S-[> gt
+map <C-S-]> gT
+map <C-1> 1gt
+map <C-2> 2gt
+map <C-3> 3gt
+map <C-4> 4gt
