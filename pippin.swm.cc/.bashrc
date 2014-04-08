@@ -19,6 +19,7 @@ PS1="\[${RED}\]\t \[${GREEN}\]pippin:\[ ${GREEN}\]\W\[${NC}\]\[${YELLOW}\]\$(par
 alias annoyances='ghi list'
 alias phs="python -m SimpleHTTPServer"
 alias nhs='http-server -p $@'
+alias psr='php -S localhost:1234'
 alias dev='cd ~/Development/'
 alias gdev='cd ~/Development/github/'
 alias copy_ssh_key="cat ~/.ssh/id_rsa.pub | pbcopy | echo 'It be in your clipboard sonny!!'"
