@@ -1,0 +1,29 @@
+[user]
+	name = Stephen McCullough
+	email = me@swm.cc
+[credential]
+	helper = osxkeychain
+[github]
+	user = swmcc
+[core]
+  excludesfile = ~/.gitignore
+[alias]
+  gl='git pull --prune'
+  ga='git add .'
+  glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+  gp='git push origin '
+  gr='git rebase -i HEAD~'
+  gd='git diff'
+  gc='git commit'
+  gca='git commit -a'
+  gcm='git commit -a -m'
+  gco='git checkout'
+  gb='git branch'
+  gs='git status -sb'
+  grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+  gwho="git shortlog -s | sort -nr"
+  gsb="git branch -a" 
+[ghi]
+	token = 
+[push]
+	default = simple
