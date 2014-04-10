@@ -1,0 +1,11 @@
+[user]
+	name = Stephen McCullough
+	email = me@swm.cc
+[credential]
+	helper = osxkeychain
+[github]
+	user = swmcc
+[ghi]
+	token = 65e570ca408a4816019dead78cc90e2526ab2ae4
+[push]
+	default = simple
