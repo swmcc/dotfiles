@@ -23,6 +23,19 @@ filetype indent plugin on
 " Enable syntax highlighting
 syntax on
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'jgdavey/tslime.vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+
+" Optional:
+Bundle "honza/vim-snippets"
+
 
 "------------------------------------------------------------
 " Must have options {{{1
@@ -165,7 +178,7 @@ function! Tab_Or_Complete()
   endif
 endfunction
 
-:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+:inoremap <Up> <C-R>=Tab_Or_Complete()<CR>
 :set dictionary="/usr/local/bin/dict"
 
 execute pathogen#infect()
