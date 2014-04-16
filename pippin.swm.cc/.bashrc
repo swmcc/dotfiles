@@ -33,6 +33,8 @@ alias ta='tmux attach -t'
 alias tm='tmux switch -t'
 alias tk='tmux kill-session -t'
 
+# not proud of this one
+alias pythong='python'
 
 # ruby
 alias bi='bundle install'
