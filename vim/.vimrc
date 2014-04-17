@@ -211,3 +211,7 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" Shortcut for indentation while inside visual mode
+vnoremap < <gv
+vnoremap > >gv 
