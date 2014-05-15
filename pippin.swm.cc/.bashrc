@@ -16,13 +16,15 @@ GREEN="\[\033[0;32m\]"
 NO_COLOUR="\[\033[0m\]"
 
 PS1="\[${RED}\]\t \[${GREEN}\]pippin:\[ ${GREEN}\]\W\[${NC}\]\[${YELLOW}\]\$(parse_git_branch) $NO_COLOUR\$ "
-alias annoyances='ghi list'
-alias phs="python -m SimpleHTTPServer"
-alias nhs='http-server -p $@'
 alias psr='php -S localhost:1234'
 alias dev='cd ~/Development/'
 alias gdev='cd ~/Development/github/'
 alias copy_ssh_key="cat ~/.ssh/id_rsa.pub | pbcopy | echo 'It be in your clipboard sonny!!'"
+alias tlf="tail -f"
+alias ...='../..'
+alias l='ls -altrh'
+alias e="$EDITOR"
+alias v="$VISUAL"
 
 # If you aren't on a mac then use netstat -p or something
 alias op="lsof -i -P | grep -i "listen" | grep 'swm'"
