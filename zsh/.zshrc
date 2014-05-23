@@ -72,3 +72,25 @@ export PATH="/Users/swm/.rvm/gems/ruby-1.9.3-p362/bin:/Users/swm/.rvm/gems/ruby-
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+alias psr='php -S localhost:1234'
+alias dev='cd ~/Development/'
+alias pdev='cd ~/Development/personal/'
+alias wdev='cd ~/Development/work/'
+alias tlf="tail -f"
+alias ...='../..'
+alias l='ls -altrh'
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+# If you aren't on a mac then use netstat -p or something
+alias op="lsof -i -P | grep -i "listen" | grep 'swm'"
+
+# tmux 
+alias ts='tmux_sessions'
+alias ta='tmux attach -t'
+alias tm='tmux switch -t'
+alias tk='tmux kill-session -t'
+
+# not proud of this one
+alias pythong='python'
