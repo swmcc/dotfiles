@@ -96,5 +96,6 @@ alias ta='tmux attach -t'
 alias tm='tmux switch -t'
 alias tk='tmux kill-session -t'
 
-# not proud of this one
+# python 
 alias pythong='python'
+alias va=". ./venv/bin/activate"
