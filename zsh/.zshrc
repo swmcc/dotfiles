@@ -99,3 +99,6 @@ alias tk='tmux kill-session -t'
 # python 
 alias pythong='python'
 alias va=". ./venv/bin/activate"
+
+# FUCK SAKE
+alias fgerp='fgrep'
