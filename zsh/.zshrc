@@ -100,5 +100,7 @@ alias tk='tmux kill-session -t'
 alias pythong='python'
 alias va=". ./venv/bin/activate"
 
+alias ffs="foreman start"
+
 # FUCK SAKE
 alias fgerp='fgrep'
