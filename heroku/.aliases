@@ -9,3 +9,6 @@ alias production-console='heroku run console --remote production'
 alias production-process='watch heroku ps --remote production'
 alias production-releases='heroku releases --remote production'
 alias production-tail='heroku logs --tail --remote production'
+
+alias hka='heroku apps'
+alias hkr='heroku releases'
