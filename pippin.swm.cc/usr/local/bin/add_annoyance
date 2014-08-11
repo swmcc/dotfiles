@@ -1,6 +1,0 @@
-#!/bin/sh -f
-
-# echo this out until I get $1 evaluated properly
-echo ghi open -m \'$1\' -L $2,$3,$4,$5,
-
-
