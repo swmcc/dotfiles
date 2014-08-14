@@ -32,9 +32,9 @@ Bundle 'jgdavey/tslime.vim'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
-
-" Optional:
 Bundle "honza/vim-snippets"
+Bundle "scrooloose/nerdtree"
+Bundle "kien/ctrlp.vim"
 
 
 "------------------------------------------------------------
@@ -211,6 +211,21 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" ctrl-p
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc 
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+" nerdtree
+silent! nmap <F5> :NERDTreeToggle<CR>
+
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>   
+nmap <silent> <c-j> :wincmd j<CR>  
+nmap <silent> <c-h> :wincmd h<CR> 
+nmap <silent> <c-l> :wincmd l<CR>
+
 
 " Shortcut for indentation while inside visual mode
 vnoremap < <gv
