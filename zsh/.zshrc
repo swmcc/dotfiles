@@ -99,6 +99,7 @@ alias tk='tmux kill-session -t'
 # python 
 alias pythong='python'
 alias va=". ./venv/bin/activate"
+alias da="deactivate"
 
 alias ffs="foreman start"
 
