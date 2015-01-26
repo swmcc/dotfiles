@@ -105,3 +105,4 @@ alias ffs="foreman start"
 
 # FUCK SAKE
 alias fgerp='fgrep'
+alias grrr='find . -name "*.sw*" | xargs rm'
