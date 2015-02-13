@@ -192,6 +192,11 @@ map <C-2> 2gt
 map <C-3> 3gt
 map <C-4> 4gt
 
+noremap h <NOP>
+noremap j <NOP>
+noremap k<NOP>
+noremap l <NOP>
+
 " ctrl-p
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc 
