@@ -199,8 +199,8 @@ noremap l <NOP>
 
 " ctrl-p
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+set wildignore+=*/tmp/*,,*_site/*,*build/*,*venv*,*bin/*,*db/*,*.pyc,*node_module*,*dist/* 
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|so|swp|zip|pyc)$'
 
 " nerdtree
 silent! nmap <F5> :NERDTreeToggle<CR>
