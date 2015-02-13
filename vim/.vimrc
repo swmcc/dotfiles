@@ -192,12 +192,6 @@ map <C-2> 2gt
 map <C-3> 3gt
 map <C-4> 4gt
 
-" Disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
 " ctrl-p
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc 
