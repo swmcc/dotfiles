@@ -220,5 +220,5 @@ vnoremap > >gv
 " Handy utility shortcuts - chances are I will be mapping
 " ,t to be whatever app I am testing at the time. However
 " this will cover most of my use cases, I think
-map ,e :tabnew ~/Dropbox/notes.txt<CR>                                                                                                                                                         
+map ,e :tabnew ~/Dropbox/notes.txt<CR>
 map ,t :!make tests.specific<CR>
