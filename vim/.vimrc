@@ -187,9 +187,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*/tmp/*,,*_site/*,*build/*,*venv*,*bin/*,*db/*,*.pyc,*node_module*,*dist/* 
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|so|swp|zip|pyc)$'
 
-" nerdtree
-silent! nmap <F5> :NERDTreeToggle<CR>
-
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>   
 nmap <silent> <c-j> :wincmd j<CR>  
