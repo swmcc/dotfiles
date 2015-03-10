@@ -3,7 +3,7 @@
 
 # Mac - *nix systems
 *.DS_Store
-*.swp
+*.swo
 *.out
 
 # Jekyll
