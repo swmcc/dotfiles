@@ -154,15 +154,7 @@ endfunction
 
 execute pathogen#infect()
 
-function! NumberToggle()
-    if(&relativenumber == 1)
-        set number
-    else
-        set relativenumber
-    endif
-endfunc
-
-nnoremap <C-n> :call NumberToggle()<cr>
+set relativenumber
 
 highlight ColourColumn ctermbg=red
 call matchadd('ColourColumn', '\%81v', 100)
