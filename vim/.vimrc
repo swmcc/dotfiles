@@ -159,8 +159,6 @@ set relativenumber
 highlight ColourColumn ctermbg=red
 call matchadd('ColourColumn', '\%81v', 100)
 
-nnoremap ; :
-
 " Getting used to tabs in vim
 map <C-S-[> gt
 map <C-S-]> gT
