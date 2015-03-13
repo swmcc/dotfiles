@@ -1,6 +1,8 @@
 set nocompatible
 filetype indent plugin on
 syntax on
+set splitbelow
+set splitright
 set hidden
 
 " Better command-line completion
