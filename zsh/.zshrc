@@ -102,6 +102,7 @@ alias va=". ./venv/bin/activate"
 alias da="deactivate"
 
 alias ffs="foreman start"
+alias v="vim"
 
 # FUCK SAKE
 alias fgerp='fgrep'
