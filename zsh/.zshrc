@@ -107,3 +107,6 @@ alias v="vim"
 # FUCK SAKE
 alias fgerp='fgrep'
 alias grrr='find . -name "*.sw*" | xargs rm'
+
+# MIQ stuff
+alias pasdb='make heroku.staging.pulldata && make loaddata'
