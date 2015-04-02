@@ -110,3 +110,5 @@ alias grrr='find . -name "*.sw*" | xargs rm'
 
 # MIQ stuff
 alias pasdb='make heroku.staging.pulldata && make loaddata'
+
+alias pj="cat $1 | python -m json.tool"
