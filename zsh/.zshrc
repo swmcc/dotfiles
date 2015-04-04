@@ -100,6 +100,7 @@ alias tk='tmux kill-session -t'
 alias pythong='python'
 alias va=". ./venv/bin/activate"
 alias da="deactivate"
+alias pin='touch __init__.py'
 
 alias ffs="foreman start"
 alias v="vim"
