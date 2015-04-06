@@ -152,5 +152,5 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 nnoremap ,<space> :nohlsearch<CR>
 
-abbr #----------------------------------------------------------------------
+abbr #- #----------------------------------------------------------------------
 abbr s@ stephen.mccullough@gmail.com
