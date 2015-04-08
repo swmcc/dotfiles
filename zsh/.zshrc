@@ -113,3 +113,10 @@ alias grrr='find . -name "*.sw*" | xargs rm'
 alias pasdb='make heroku.staging.pulldata && make loaddata'
 
 alias pj="cat $1 | python -m json.tool"
+
+export JAVA_HOME=`/usr/libexec/java_home  -v 1.7`
+export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/libexec/bin
+export PATH=$ANT_ROOT:$PATH
+export ANDROID_HOME="/Users/swm/Development/android-sdk-macosx/"
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools
