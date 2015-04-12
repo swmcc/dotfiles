@@ -165,3 +165,7 @@ function! OpenJasmineSpecInBrowser()
   let url = host_fragment . url_fragment
   silent exec "!open ~/bin/chrome" url 
 endfunction
+
+" I use this when spiking/refactoring - then rebase with a proper commit
+map ,gaw :!git add . && git commit -m 'WIP'<cr>
+map ,gw :!git commit -am 'WIP'<cr>
