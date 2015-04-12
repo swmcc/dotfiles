@@ -150,7 +150,18 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ' 
 
+
 nnoremap ,<space> :nohlsearch<CR>
 
 abbr #- #----------------------------------------------------------------------
 abbr s@ stephen.mccullough@gmail.com
+
+map ,sj :call OpenJasmineSpecInBrowser()<cr>
+" Stolen from r00k - https://gist.github.com/r00k/2226918 
+function! OpenJasmineSpecInBrowser()
+  let filename = expand('%')
+  let url_fragment = substitute(filename, "spec/javascripts", "evergreen/run", "") 
+  let host_fragment = "http://localhost:3000/"
+  let url = host_fragment . url_fragment
+  silent exec "!open ~/bin/chrome" url 
+endfunction
