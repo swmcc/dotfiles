@@ -1,3 +1,0 @@
-#!/bin/sh -f
-
-colortail /var/log/httpd/$1-access_log#apache
