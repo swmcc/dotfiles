@@ -1,9 +1,9 @@
 #!/bin/sh -f
 
-# Get my skeleton README from github and open it in IA Writer
+# Get my skeleton README from github and open it vim 
 
 GISTDIR="/tmp/$$"
 git clone https://gist.github.com/5669227.git $GISTDIR
 mv $GISTDIR/README.md $1 
 
-open $1 -a /Applications/iA\ Writer.app
+vim $1
