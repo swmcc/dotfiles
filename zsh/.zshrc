@@ -104,6 +104,7 @@ alias pin='touch __init__.py'
 
 alias ffs="foreman start"
 alias v="vim"
+alias gcm='git checkout master'
 
 # FUCK SAKE
 alias fgerp='fgrep'
