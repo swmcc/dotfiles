@@ -1,5 +1,0 @@
-#!/bin/sh -f
-
-git config --global user.name "Stephen McCullough"
-git config --global user.email "me@swm.cc"
-git config ghi.repo swmcc/annoyances
