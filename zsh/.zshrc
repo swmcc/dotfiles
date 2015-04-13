@@ -77,44 +77,6 @@ export PATH="/Users/swm/.rvm/gems/ruby-1.9.3-p362/bin:/Users/swm/.rvm/gems/ruby-
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-alias psr='php -S localhost:1234'
-alias dev='cd ~/Development/'
-alias pdev='cd ~/Development/personal/'
-alias wdev='cd ~/Development/work/'
-alias tlf="tail -f"
-alias ...='../..'
-alias l='ls -altrh'
-alias e="$EDITOR"
-alias v="$VISUAL"
-
-# If you aren't on a mac then use netstat -p or something
-alias op="lsof -i -P | grep -i "listen" | grep 'swm'"
-
-# tmux 
-alias ts='tmux_sessions'
-alias ta='tmux attach -t'
-alias tm='tmux switch -t'
-alias tk='tmux kill-session -t'
-
-# python 
-alias pythong='python'
-alias va=". ./venv/bin/activate"
-alias da="deactivate"
-alias pin='touch __init__.py'
-
-alias ffs="foreman start"
-alias v="vim"
-alias gcm='git checkout master'
-
-# FUCK SAKE
-alias fgerp='fgrep'
-alias grrr='find . -name "*.sw*" | xargs rm'
-
-# MIQ stuff
-alias pasdb='make heroku.staging.pulldata && make loaddata'
-
-alias pj="cat $1 | python -m json.tool"
-
 export JAVA_HOME=`/usr/libexec/java_home  -v 1.7`
 export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/libexec/bin
 export PATH=$ANT_ROOT:$PATH
