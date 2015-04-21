@@ -7,9 +7,8 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Load aliases
+source $HOME/.aliases
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
