@@ -25,6 +25,7 @@ alias rdm='rake db:migrate'
 alias rdt='rake test'
 
 # workflow
+alias f="fg"
 alias v="vim"
 alias pj="cat $1 | python -m json.tool"
 alias dev='cd ~/Development/'
