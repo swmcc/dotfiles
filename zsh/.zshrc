@@ -76,9 +76,9 @@ export PATH="/Users/swm/.rvm/gems/ruby-1.9.3-p362/bin:/Users/swm/.rvm/gems/ruby-
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export JAVA_HOME=`/usr/libexec/java_home  -v 1.7`
-export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/libexec/bin
-export PATH=$ANT_ROOT:$PATH
-export ANDROID_HOME="/Users/swm/Development/android-sdk-macosx/"
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/tools
+#export JAVA_HOME=`/usr/libexec/java_home  -v 1.7`
+#export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/libexec/bin
+#export PATH=$ANT_ROOT:$PATH
+#export ANDROID_HOME="/Users/swm/Development/android-sdk-macosx/"
+#export PATH=$PATH:$ANDROID_HOME/platform-tools
+#export PATH=$PATH:$ANDROID_HOME/tools

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh 
 
 OS=`uname`
 
@@ -8,6 +8,9 @@ function os_install {
 	echo "curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh"
   	echo "chsh -s /bin/zsh"
 	cp aliases/.aliases $HOME/.aliases
+	cp zsh/.zshrc $HOME/.zshrc
+
+	source ~/.zshrc
 }
 
 function main {
