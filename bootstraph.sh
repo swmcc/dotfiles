@@ -25,11 +25,17 @@ function vim_plugins_install {
 	git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
 }
 
+function brew_install {
+	brew install tig
+	brew install tmux
+}
+
 
 function os_install {
 	echo "OSX"
 	zsh_install
 	vim_plugins_install
+	brew_install
 }
 
 function main {
