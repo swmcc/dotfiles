@@ -43,6 +43,9 @@ alias pasdb='make heroku.staging.pulldata && make loaddata'
 alias adev='cd ~/Development/work/audit-comply'
 alias sdev='cd ~/Development/work/salt-dna' 
 
+# rails
+alias rs='rails server'
+
 # git
 alias gl='git pull --prune'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
