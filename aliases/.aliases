@@ -45,6 +45,9 @@ alias sdev='cd ~/Development/work/salt-dna'
 
 # rails
 alias rs='rails server'
+alias bi='bundle install'
+alias bc='bundle init'
+alias rr='rake routes'
 
 # git
 alias gl='git pull --prune'
