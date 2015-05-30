@@ -128,6 +128,7 @@ vnoremap > >gv
 " ,t to be whatever app I am testing at the time. However
 " this will cover most of my use cases, I think
 map ,e :tabnew ~/Dropbox/notes.txt<CR>
+command TIL tabe~/Dropbox/notes/TIL.md
 
 autocmd BufWritePre *.py :%s/\s\+$//e
 inoremap jk <Esc> 
