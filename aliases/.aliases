@@ -24,8 +24,8 @@ alias bi='bundle install'
 alias rdc='rake db:create'
 alias rds='rake db:seed'
 alias rdm='rake db:migrate'
-alias rt='rake test'
-alias rs='rails s'
+alias rt='./bin/rake test'
+alias rs='./bin/rails s'
 
 # workflow
 alias f="fg"
