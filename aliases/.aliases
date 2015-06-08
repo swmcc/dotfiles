@@ -21,8 +21,11 @@ alias pin='touch __init__.py'
 # ruby
 alias ffs="foreman start"
 alias bi='bundle install'
+alias rdc='rake db:create'
+alias rds='rake db:seed'
 alias rdm='rake db:migrate'
-alias rdt='rake test'
+alias rt='rake test'
+alias rs='rails s'
 
 # workflow
 alias f="fg"
