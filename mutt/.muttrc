@@ -134,5 +134,10 @@ mono bold bold
 mono underline underline
 mono indicator reverse
 
+# Give me a nicer view. This probably means I am setting colours
+# above that are now redundant.. but you know.. fook it :)
+set markers=no # removes the "+" sign from the beginning of wrapped lines
+set pager_index_lines= 5
+
 # Shout out to @szlwzl 
 set status_format="/Users/whoever/.muttrc/notify.sh '%?n?%n new?'|"
