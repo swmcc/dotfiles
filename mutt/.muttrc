@@ -3,14 +3,11 @@
 # mkdir -p ~/.mutt/cache/headers mkdir ~/.mutt/cache/bodies touch ~/.mutt/certificates
 
 # Change the following lines to match your account details
-account-hook	imaps://user@domain@imap.gmail.com 'set imap_user=user@domain@gmail.com imap_pass="PASSWORD"'
-folder-hook     'imaps://user@domain@imap.gmail.com' 'set folder=imaps://user@domain@imap.gmail.com/'
-set folder="imaps://user@domain@imap.gmail.com"
-mailboxes "=INBOX"
+folder-hook 'account.com' 'source ~/.mutt/account.com'
+folder-hook 'account_another.com' 'source ~/.mutt/account_another.com'
 
-# Copy and paste the above lines for every account you have. You can set up the folder display in GMAIL
-# under the 'Label' section. There is probably a way to do this in mutt - however I can't remember it
-# if there is. 
+macro index <f2> '<sync-mailbox><enter-command>source ~/.mutt/account.com<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source ~/.mutt/account_another.com<enter><change-folder>!<enter>'
 
 unset folder
 unset imap_passive
