@@ -17,3 +17,5 @@ Bundle 'klen/python-mode'
 
 # git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 # git clone https://github.com/airblade/vim-gitgutter
+# git clone git://github.com/tpope/vim-cucumber.git
+
