@@ -1,3 +1,5 @@
+set shell=/bin/sh
+
 set nocompatible
 filetype indent plugin on
 syntax on
@@ -65,7 +67,9 @@ set notimeout ttimeout ttimeoutlen=200
 
 " everything else at 2 but python at 4
 set smartindent
-autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
+set expandtab
+set tabstop=4
+autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ts=2 sw=2 sts=2 et
 autocmd FileType python set sw=4 sts=4 et
 
 "------------------------------------------------------------
@@ -96,7 +100,7 @@ endfunction
 execute pathogen#infect()
 
 set relativenumber
-
+set number
 highlight ColourColumn ctermbg=red
 call matchadd('ColourColumn', '\%81v', 100)
 
@@ -110,8 +114,8 @@ map <C-4> 4gt
 
 " ctrl-p
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set wildignore+=*/tmp/*,,*_site/*,*build/*,*venv*,*bin/*,*db/*,*.pyc,*node_module*,*dist/* 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|so|swp|zip|pyc)$'
+set wildignore+=*/tmp/*,*_site/*,*build/*,*venv*,*bin/*,*db/*,*.pyc,*node_module*,*dist/* 
+let g:ctrlp_custom_ignore = '\v[\/]\.(hg|svn|so|swp|zip|pyc)$'
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>   
@@ -127,10 +131,12 @@ vnoremap > >gv
 " Handy utility shortcuts - chances are I will be mapping
 " ,t to be whatever app I am testing at the time. However
 " this will cover most of my use cases, I think
-map ,e :tabnew ~/Dropbox/notes.txt<CR>
+map ,e :tabnew ~/Dropbox/github_todo/readme.md<CR>
+map ,w :tabnew ~/Dropbox/github_todo/work.md<CR>
+map ,o :tabnew ~/Dropbox/github_todo/online_inventory.md<CR>
 command TIL tabe~/Dropbox/notes/TIL.md
 
-autocmd BufWritePre *.py :%s/\s\+$//e
+autocmd BufWritePre *.rb :%s/\s\+$//e
 inoremap jk <Esc> 
 
 if !exists('g:airline_symbols')
@@ -151,22 +157,49 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ' 
 
-
 nnoremap ,<space> :nohlsearch<CR>
 
+abbr asd - [ ]
 abbr #- #----------------------------------------------------------------------
 abbr s@ stephen.mccullough@gmail.com
-
-map ,sj :call OpenJasmineSpecInBrowser()<cr>
-" Stolen from r00k - https://gist.github.com/r00k/2226918 
-function! OpenJasmineSpecInBrowser()
-  let filename = expand('%')
-  let url_fragment = substitute(filename, "spec/javascripts", "evergreen/run", "") 
-  let host_fragment = "http://localhost:3000/"
-  let url = host_fragment . url_fragment
-  silent exec "!open ~/bin/chrome" url 
-endfunction
+abbr pvl  #### [](https://www.pivotaltracker.com/story/show/) - 
 
 " I use this when spiking/refactoring - then rebase with a proper commit
+map ,gawp :!git add . && git commit -m 'WIP' && git push origin master<cr>
 map ,gaw :!git add . && git commit -m 'WIP'<cr>
 map ,gw :!git commit -am 'WIP'<cr>
+
+" I take notes on a per session basis 'Scratchpad' is good.
+map ,s :Scratch<CR>
+map ,ss :Sscratch<CR>
+
+" handy vim-rails wrappers
+map ,a :AV<cr>
+map ,at :AT<cr>
+map <Leader>t :call RunCurrentSpecFile()<CR>
+
+map ,t :Rake<cr>
+map '' csiw"'
+
+nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
+nnoremap <silent> ,gf :vertical botright wincmd f<CR>
+
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+set runtimepath^=~/.vim/bundle/ag
+
+map ,ll :!tig %<CR>
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+for c in range(char2nr('A'), char2nr('Z'))
+  execute 'lnoremap ' . nr2char(c+32) . ' ' . nr2char(c)
+  execute 'lnoremap ' . nr2char(c) . ' ' . nr2char(c+32)
+endfor
