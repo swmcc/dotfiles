@@ -1,0 +1,3 @@
+#!/bin/sh
+
+git status --porcelain | awk '{print $2}' | grep spec | xargs rspec --format doc
