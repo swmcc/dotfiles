@@ -123,7 +123,6 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR> 
 nmap <silent> <c-l> :wincmd l<CR>
 
-
 " Shortcut for indentation while inside visual mode
 vnoremap < <gv
 vnoremap > >gv 
@@ -133,7 +132,6 @@ vnoremap > >gv
 " this will cover most of my use cases, I think
 map ,e :tabnew ~/Dropbox/github_todo/readme.md<CR>
 map ,w :tabnew ~/Dropbox/github_todo/work.md<CR>
-map ,o :tabnew ~/Dropbox/github_todo/online_inventory.md<CR>
 command TIL tabe~/Dropbox/notes/TIL.md
 
 autocmd BufWritePre *.rb :%s/\s\+$//e
@@ -176,9 +174,13 @@ map ,ss :Sscratch<CR>
 " handy vim-rails wrappers
 map ,a :AV<cr>
 map ,at :AT<cr>
-map <Leader>t :call RunCurrentSpecFile()<CR>
+" map <Leader>t :call RunCurrentSpecFile()<CR>
+map ,t :call RunCurrentSpecFile()<CR>
+map ,s :call RunNearestSpec()<CR>
+map ,l :call RunLastSpec()<CR>
+map ,a :call RunAllSpecs()<CR>
 
-map ,t :Rake<cr>
+"map ,t :Rake<cr>
 map '' csiw"'
 
 nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
@@ -203,3 +205,6 @@ for c in range(char2nr('A'), char2nr('Z'))
   execute 'lnoremap ' . nr2char(c+32) . ' ' . nr2char(c)
   execute 'lnoremap ' . nr2char(c) . ' ' . nr2char(c+32)
 endfor
+
+map <C-n> :NERDTreeToggle<CR>
+nmap <silent> ./ :nohlsearch<CR>
