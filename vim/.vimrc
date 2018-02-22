@@ -11,15 +11,43 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'elixir-editors/vim-elixir'
 Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'jakedouglas/exuberant-ctags'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'avdgaag/vim-phoenix'
+Plugin 'mmorearty/elixir-ctags'
+Plugin 'mattreduce/vim-mix'
+Plugin 'BjRo/vim-extest'
+Plugin 'frost/vim-eh-docs'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'jadercorrea/elixir_generator.vim'
+Plugin 'AnsiEsc.vim'
+Plugin 'sjl/badwolf'
+Plugin 'tomasr/molokai'
+Plugin 'morhetz/gruvbox'
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'junegunn/limelight.vim'
+Plugin 'mkarmona/colorsbox'
+Plugin 'romainl/Apprentice'
+Plugin 'Lokaltog/vim-distinguished'
+Plugin 'chriskempson/base16-vim'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'AlessandroYorba/Sierra'
+Plugin 'daylerees/colour-schemes'
+Plugin 'effkay/argonaut.vim'
+Plugin 'ajh17/Spacegray.vim'
+Plugin 'atelierbram/Base2Tone-vim'
+Plugin 'colepeters/spacemacs-theme.vim'
+Plugin 'majutsushi/tagbar'
+
+let g:elite_mode=1
 
 filetype plugin indent on
-
 set splitbelow
 set splitright
 set noswapfile
@@ -55,7 +83,7 @@ let g:UltiSnipsEditSplit="vertical"
 autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ts=2 sw=2 sts=2 et
 autocmd FileType python set sw=4 sts=4 et
 
-set wildignore+=*/tmp/*,*_site/*,*build/*,*venv*,*bin/*,*db/*,*.pyc,*node_module*,*dist/*
+set wildignore+=*/tmp/*,*_site/*,*build/*,*venv*,*bin/*,*db/*,*.pyc,*node_module*,*dist/,*lib/*
 let g:ctrlp_custom_ignore = '\v[\/]\.(hg|svn|so|swp|zip|pyc)$'
 
 nmap <silent> <c-k> :wincmd k<CR>
@@ -74,11 +102,27 @@ highlight SpecialKey guifg=#4a4a59
 
 nmap <leader>l :set list!<CR>
 
+" Theme and Styling
+set t_Co=256
+set background=dark
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme spacegray
+let g:spacegray_underline_search = 1
+let g:spacegray_italicize_comments = 1
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
-set guifont=Space_Mono:11
+if exists('g:loaded_webdevicons')
+    call webdevicons#refresh()
+endif
+
+set guifont=Knack_Regular_Nerd_Font_Complete:14
 set encoding=utf8
 let g:airline_powerline_fonts = 1
 
@@ -95,3 +139,27 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
+
+" Elixir Tagbar Configuration
+let g:tagbar_type_elixir = {
+    \ 'ctagstype' : 'elixir',
+    \ 'kinds' : [
+        \ 'f:functions',
+        \ 'functions:functions',
+        \ 'c:callbacks',
+        \ 'd:delegates',
+        \ 'e:exceptions',
+        \ 'i:implementations',
+        \ 'a:macros',
+        \ 'o:operators',
+        \ 'm:modules',
+        \ 'p:protocols',
+        \ 'r:records',
+        \ 't:tests'
+    \ ]
+    \ }
+
+    
+autocmd FileType elixir nnoremap <buffer> <leader>h :call alchemist#exdoc()<CR>
+autocmd FileType elixir nnoremap <buffer> <leader>d :call alchemist#exdef()<CR>
+
