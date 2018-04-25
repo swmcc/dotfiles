@@ -94,6 +94,7 @@ nmap <silent> <c-h> :wincmd h<CR>
 map ,gawp :!git add . && git commit -m 'WIP' && git push origin master<cr>
 map ,gaw :!git add . && git commit -m 'WIP'<cr>
 map ,gw :!git commit -am 'WIP'<cr>
+map ,j :%!jq '.'<cr>
 nmap <silent> ./ :nohlsearch<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
