@@ -84,6 +84,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ts=2 sw=2 sts=2 et
 autocmd FileType python set sw=4 sts=4 et
+autocmd FileType ghmarkdown set spell spelllang=en_gb
 
 set wildignore+=*/tmp/*,*_site/*,*build/*,*venv*,*bin/*,*db/*,*.pyc,*node_module*,*dist/,*lib/*
 let g:ctrlp_custom_ignore = '\v[\/]\.(hg|svn|so|swp|zip|pyc)$'
