@@ -1,0 +1,19 @@
+[
+  {
+    "key": "ctrl+k ctrl+a",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Run test suite"
+  },
+  {
+    "key": "ctrl+k ctrl+t",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Run test file",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+k ctrl+l",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Run test case",
+    "when": "editorTextFocus"
+  }
+]
