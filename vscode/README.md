@@ -1,4 +1,5 @@
 ## Two steps to configuring test shortcuts
+
 VSCode integrates with external tools using “tasks” which are defined at the project level. They can be included in project repositories so they can be shared by the development team. Tasks are used throughout the editor to integrate things like build tools, linters, and test runners in a uniform way.
 
 VSCode also allows you to create custom keybindings that can run any defined task. Keybindings are defined globally and are configured according to the user’s taste.
@@ -52,3 +53,7 @@ When defines when the keybinding should be available. In this example you can �
 The when option can be very specific, checking for a certain language mode or that the focused editor has a certain filename or extension. These conditions could be useful if you have a single project (or multiple project workspace) that uses multiple test toolings.
 
 In that case you could bind the same keys to different tasks based on context. The available filters can be found at ‘when’ clause contexts.
+
+## Running
+
+```ln -s /Users/swm/Code/dotfiles/vscode/give_me_a_test_file.sh /usr/local/bin/give_me_a_test_file```
