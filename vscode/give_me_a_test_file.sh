@@ -15,6 +15,8 @@ if [ $type == "elixir" ]; then
   [[ $test_type == 'mix' ]] && file="tasks.json.mix"
 elif [ $type == "ruby" ]; then
   [[ $test_type == 'rspec' ]] && file="tasks.json.rspec"
+elif [ $type == "python" ]; then
+  [[ $test_type == 'django' ]] && file="tasks.json.django"
 else
   echo "$type doesn't exist"
   exit 1;
