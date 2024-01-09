@@ -18,40 +18,11 @@ alias va=". ./venv/bin/activate"
 alias da="deactivate"
 alias pin='touch __init__.py'
 
-# ruby
-alias ffs="foreman start"
-alias bi='bundle install'
-alias rdc='rake db:create'
-alias rds='rake db:seed'
-alias rdm='rake db:migrate'
-alias rt='./bin/rake test'
-alias rs='./bin/rails s'
-
 # workflow
 alias f="fg"
 alias v="vim"
-alias pj="cat $1 | python -m json.tool"
-alias dev='cd ~/Development/'
-alias pdev='cd ~/Development/personal/'
-alias wdev='cd ~/Development/work/'
 alias psr='php -S localhost:1234'
 alias tlf="tail -f"
-
-# FUCK SAKE
-alias fgerp='fgrep'
-alias grrr='find . -name "*.sw*" | xargs rm'
-
-# MIQ stuff
-alias pasdb='make heroku.staging.pulldata && make loaddata'
-alias adev='cd ~/Development/work/audit-comply'
-alias sdev='cd ~/Development/work/salt-dna' 
-
-# rails
-alias rs='rails server'
-alias bi='bundle install'
-alias bii='bundle init'
-alias bc='bundle init'
-alias rr='rake routes'
 
 # git
 alias gl='git pull --prune'
@@ -67,7 +38,8 @@ alias gs='git status -sb'
 alias gsb="git branch -a"
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gwho="git shortlog -s | sort -nr"
-alias gm='git checkout master'
 alias ga='git add .'
 alias gaw="git add . && git commit -m 'WIP'"
 alias gw="git commit -am 'WIP'"
+alias gdc="git diff | pbcopy"
+alias gsdc="git show $1 | pbcopy"
