@@ -23,6 +23,7 @@ alias f="fg"
 alias v="vim"
 alias psr='php -S localhost:1234'
 alias tlf="tail -f"
+alias c='~/Code/'
 
 # git
 alias gl='git pull --prune'
@@ -43,3 +44,4 @@ alias gaw="git add . && git commit -m 'WIP'"
 alias gw="git commit -am 'WIP'"
 alias gdc="git diff | pbcopy"
 alias gsdc="git show $1 | pbcopy"
+alias grb='git rebase -i HEAD~10'
