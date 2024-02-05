@@ -1,0 +1,22 @@
+# This brewfile is a result of me parsing my history for brew commands. 
+# It's not perfect, but it's a start. I'm sure there are some things 
+# that are missing, but it's a start. I haven't tested running it.
+
+tap 'tap homebrew/cask-fontsheroku/brew' 
+tap 'homebrew/cask-fonts'
+
+brew 'wget'
+brew 'tig'
+brew 'neovim'
+brew 'tmux'
+brew 'heroku'
+brew 'puma'/puma/puma-dev
+brew 'grip'
+brew 'ack'
+brew 'ag'
+brew 'font'-hack-nerd-font
+brew 'gpg'
+brew 'openssl'
+brew 'psql'
+brew 'stripe'/stripe-cli/stripe
+brew 'gh'
