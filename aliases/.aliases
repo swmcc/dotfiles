@@ -45,3 +45,4 @@ alias gw="git commit -am 'WIP'"
 alias gdc="git diff | pbcopy"
 alias gsdc="git show $1 | pbcopy"
 alias grb='git rebase -i HEAD~10'
+alias gfc='git diff --stat --name-only'
