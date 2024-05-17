@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+
+import datetime
+import argparse
+
+
+def get_weekday(date_str):
+    try:
+        date_obj = datetime.datetime.strptime(date_str, "%d-%m-%Y")
+        weekday = date_obj.strftime("%A")
+        return weekday
+    except ValueError:
+        return "Invalid date format. Please use dd-mm-yyyy."
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Calculate the day of the week for a given date."
+    )
+    parser.add_argument("date", type=str, help="Date in dd-mm-yyyy format")
+
+    args = parser.parse_args()
+
+    weekday = get_weekday(args.date)
+    print(f"The day for {args.date} is {weekday}")
