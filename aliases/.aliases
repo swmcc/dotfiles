@@ -6,24 +6,15 @@ alias v="$VISUAL"
 # If you aren't on a mac then use netstat -p or something
 alias op="lsof -i -P | grep -i "listen" | grep 'swm'"
 
-# tmux 
-alias ts='tmux_sessions'
-alias ta='tmux attach -t'
-alias tm='tmux switch -t'
-alias tk='tmux kill-session -t'
-
 # python 
-alias pythong='python'
-alias va=". ./venv/bin/activate"
-alias da="deactivate"
 alias pin='touch __init__.py'
 
 # workflow
 alias f="fg"
-alias v="vim"
-alias psr='php -S localhost:1234'
+alias vim='nvim'
+alias v="nvim"
 alias tlf="tail -f"
-alias c='~/Code/'
+alias c='~/Document/Code/'
 
 # git
 alias gl='git pull --prune'
@@ -46,3 +37,37 @@ alias gdc="git diff | pbcopy"
 alias gsdc="git show $1 | pbcopy"
 alias grb='git rebase -i HEAD~10'
 alias gfc='git diff --stat --name-only'
+
+pretty_tmux_ls() {
+  local sessions=$(tmux ls "$@")
+  local counter=1
+
+  clear
+  while IFS= read -r session; do
+    local session_name=$(echo $session | awk -F: '{print $1}')
+    echo "$counter: $session_name"
+    counter=$((counter + 1))
+  done <<< "$sessions"
+}
+
+attach_tmux_session() {
+  local session_name="$1"
+  if [ -z "$session_name" ]; then
+    echo "Usage: ta <session_name>"
+    return 1
+  fi
+  tmux attach-session -t "$session_name"
+}
+
+kill_tmux_session() {
+  local session_name="$1"
+  if [ -z "$session_name" ]; then
+    echo "Usage: tk <session_name>"
+    return 1
+  fi
+  tmux kill-session -t "$session_name"
+}
+
+alias ts='pretty_tmux_ls'
+alias ta='attach_tmux_session'
+alias tk='kill_tmux_session'
