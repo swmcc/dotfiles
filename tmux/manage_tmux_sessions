@@ -1,0 +1,35 @@
+#!/bin/bash
+
+save_tmux_sessions() {
+	tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/save.sh
+}
+
+restore_tmux_sessions() {
+	tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh
+}
+
+check_or_create_session() {
+	local session_name="$1"
+	local command="$2"
+
+	if tmux has-session -t "$session_name" 2>/dev/null; then
+		echo "Session $session_name already exists."
+	else
+		echo "Creating session $session_name."
+		tmux new-session -d -s "$session_name"
+	fi
+
+	if [ -n "$command" ]; then
+		tmux send-keys -t "$session_name" "$command" C-m
+	fi
+}
+
+if [ "$1" == "--save" ]; then
+	save_tmux_sessions
+elif [ "$1" == "--restore" ]; then
+	restore_tmux_sessions
+elif [ "$1" == "--session" ] && [ -n "$2" ]; then
+	check_or_create_session "$2" "$3"
+else
+	echo "Usage: $0 --save | --restore | --session <session_name> [command]"
+fi
