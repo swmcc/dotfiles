@@ -1,4 +1,0 @@
-alias ts='tmux_sessions'
-alias ta='tmux attach -t'
-alias tm='tmux switch -t'
-alias tk='tmux kill-session -t'
