@@ -25,6 +25,10 @@ and zsh to name a few.
 By storing my dotfiles in a Git repository, I'm able to use them on any
 OS X or Linux machine with Internet access.
 
+However unlike other dotfiles these aren't easily installed by some bootstrap script,
+I just copy and paste the files/sections I need. They are saved into app folders
+for easy reference.
+
 This means that in addition to gaining the ability to revert back to a
 known-working setup should I misconfigure any files, I will also be able
 to work in an environment that I have customised myself. On almost any
@@ -33,11 +37,11 @@ my customisations.
 
 ## Links
 
-[Zach Holman's explanation](https://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/) 
+[Zach Holman's explanation](https://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/)
 
 ## Development Info
 
-```
+```bash
 git@github.com:swmcc/dotfiles.git
 cd dotfiles
 ```
