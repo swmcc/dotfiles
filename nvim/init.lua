@@ -3,6 +3,23 @@ require("config.lazy")
 
 vim.opt.swapfile = false
 
+vim.log.level = 'error'
+
+require('mini.surround').setup({
+  mappings = {
+    add = 'sa',
+    delete = 'sd',
+    find = 'sf',
+    find_left = 'sF',
+    highlight = 'sh',
+    replace = 'sr',
+    update_n_lines = 'sn'
+  },
+  n_lines = 20,
+  highlight_duration = 500,
+  search_method = 'cover',
+})
+
 require("obsidian").setup({
 	workspaces = {
 		{
