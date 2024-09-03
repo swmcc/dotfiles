@@ -8,7 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEMES=($(ls ~/.oh-my-zsh/themes/*.zsh-theme | xargs -n 1 basename | sed 's/\.zsh-theme//'))
+ZSH_THEME="${ZSH_THEMES[$RANDOM % ${#ZSH_THEMES[@]}]}"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
