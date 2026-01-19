@@ -1,0 +1,41 @@
+session_name: catch
+start_directory: ~/Code/catch
+
+windows:
+  - window_name: code
+    layout: main-vertical
+    options:
+      main-pane-width: 65%
+    panes:
+      - shell_command:
+          - nvim .
+      - shell_command:
+          - make help
+
+  - window_name: server
+    panes:
+      - shell_command:
+          - bin/dev
+
+  - window_name: console
+    layout: even-horizontal
+    panes:
+      - shell_command:
+          - echo "bin/rails c"
+      - shell_command:
+          - echo "bin/rails dbconsole"
+
+  - window_name: test
+    panes:
+      - shell_command:
+          - echo "bin/rails test"
+
+  - window_name: claude
+    panes:
+      - shell_command:
+          - claude
+
+  - window_name: git
+    panes:
+      - shell_command:
+          - git status

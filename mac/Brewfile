@@ -20,3 +20,4 @@ brew 'openssl'
 brew 'psql'
 brew 'stripe'/stripe-cli/stripe
 brew 'gh'
+brew 'tmuxp'
